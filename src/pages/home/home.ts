@@ -20,7 +20,7 @@ ionViewWillEnter() {
 
 
 onLoadNewPlace()  {
-this.navCtrl.push(NewPlacePage);
+  this.navCtrl.push(NewPlacePage);
 }
 
 }

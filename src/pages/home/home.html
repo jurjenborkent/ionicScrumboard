@@ -1,10 +1,10 @@
 <ion-header>
   <ion-navbar>
     <ion-buttons right>
-      <button ion-button icon-only (click)="onLoadNewPlace()">
-        <ion-icon name="add"></ion-icon>
+      <button class="add-circle" ion-button icon-only (click)="onLoadNewPlace()">
+        <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-buttons>
+    </ion-buttons>
     <ion-title>
       To-do lijst
     </ion-title>
@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content padding>
-<ion-list>
-  <ion-item *ngFor="let place of places">{{place.title}}</ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item *ngFor="let place of places">{{place.title}}</ion-item>
+  </ion-list>
 </ion-content>
