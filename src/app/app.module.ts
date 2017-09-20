@@ -9,12 +9,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NewPlacePage } from '../pages/new-place/new-place';
 import { PlacesService } from '../services/places.service';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    NewPlacePage
+    NewPlacePage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { PlacesService } from '../services/places.service';
   entryComponents: [
     MyApp,
     HomePage,
-    NewPlacePage
+    NewPlacePage,
+    TabsPage
   ],
   providers: [
     StatusBar,
