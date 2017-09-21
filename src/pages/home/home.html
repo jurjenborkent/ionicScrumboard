@@ -13,12 +13,14 @@
 
 <ion-content padding>
 
-<h1>
-Takenlijst:
-</h1>
-
-
 <ion-list>
-  <ion-item *ngFor="let place of places">{{place.title}}</ion-item>
+  <ion-item *ngFor="let place of places">
+    <div class='task'>
+    <h2>Taak:</h2>{{place.title}}
+    <h2>Punten:</h2>{{place.points}}
+    <h2>Persoon:</h2>{{place.assignedTo}}
+</div>
+
+   </ion-item>
 </ion-list>
 </ion-content>

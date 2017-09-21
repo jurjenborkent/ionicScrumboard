@@ -12,9 +12,9 @@ export class NewPlacePage {
 
   constructor(private placesService: PlacesService, private navCtrl: NavController) {}
 
-  onAddPlace(value: {title: string}) {
-  this.placesService.addPlace(value);
-  this.navCtrl.pop();
+  onAddPlace(place: {title: string, points: number, assignedTo: string}) {
+    this.placesService.addPlace(place);
+    this.navCtrl.pop();
   }
 
 }

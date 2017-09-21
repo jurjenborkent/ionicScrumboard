@@ -8,9 +8,15 @@ import { PlacesService } from '../../services/places.service';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  places: {title: string}[] = [];
+  places: {
+    title: string,
+    points: number,
+    assignedTo: string
+  }[] = [];
 
-  constructor(public navCtrl: NavController, private placesService: PlacesService) {
+
+
+  constructor(public navCtrl: NavController, public placesService: PlacesService) {
 
 }
 
@@ -20,7 +26,7 @@ ionViewWillEnter() {
 
 
 onLoadNewPlace()  {
-this.navCtrl.push(NewPlacePage);
+  this.navCtrl.push(NewPlacePage);
 }
 
 }
