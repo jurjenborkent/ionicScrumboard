@@ -1,28 +1,26 @@
 
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Taak toevoegen</ion-title>
+<ion-header class="header-default">
+  <div class="header-overlay"></div>
+  <ion-navbar class="navbar-default">
+    <ion-title center>Nieuwe taak</ion-title>
+    <ion-title center>NW11-steden</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
 <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
   <ion-item>
-    <ion-label>Taak</ion-label>
+    <ion-label>Taak :</ion-label>
     <ion-input type="text" name="title" ngModel required></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label>Punten</ion-label>
-  <ion-input type="number" name="points" ngModel required></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label>Toegewezen aan</ion-label>
-  <ion-input type="text" name="assignedTo" ngModel required></ion-input>
-</ion-item>
-
-  <button ion-button block type="submit" [disabled]="!f.valid">Voeg taak toe</button>
+  </ion-item>
+  <ion-item>
+    <ion-label>Punten :</ion-label>
+    <ion-input type="number" name="points" ngModel required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Toegewezen aan :</ion-label>
+    <ion-input type="text" name="assignedTo" ngModel required></ion-input>
+  </ion-item>
+  <button type="submit" [disabled]="!f.valid" class="button button-submit white">Toevoegen</button>
 </form>
 </ion-content>

@@ -1,3 +1,20 @@
-page-home {
+$main-color: #f8f8f8;
+$secondary-color: blue;
 
+ion-header {
+    padding: 3rem;
+    background-color: $main-color;
+    .add-circle {
+        font-size: 2rem;
+    }
+}
+
+.task-title {
+    text-align: center;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

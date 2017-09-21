@@ -1,16 +1,59 @@
-// http://ionicframework.com/docs/theming/
+$main-color:#24749D;
+$white: #fff;
 
+@mixin backgroundDefault($imgpath,$position:50% 50%,$repeat: no-repeat,$size: cover) {
+   background: transparent url(#{$imgpath}) $repeat $position;
+   background-size: $size;
+}
+.header-default {
+   @include backgroundDefault('../assets/images/header-img.jpg');
+}
+.header-overlay {
+    background-color: $main-color;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+$transparent: transparent;
+
+.navbar-default {
+    background-color: $transparent;    
+    .toolbar-background-md {
+        background: $transparent;
+    }
+}
+
+$title-font-family: helvetica;
+$title-size: 3rem;
+$title-color: $white;
+
+.toolbar-title-md {
+    font-family: $title-font-family;
+    font-size: $title-size;
+    text-align: center;
+    color: $white;
+}
+
+.white {
+    color: $white;
+}
+
+.button-submit {
+    background-color: $main-color;
+    opacity: 1;
+    margin: auto;
+    width: 100%;
+    display: block;
+    font-size: 2.5rem;
+    padding: 2rem;
+    border-radius: 6px;
+    margin-top: 3rem;
+}
+
+.center {
+    text-align: center;
+}
