@@ -1,3 +1,10 @@
-page-tabs {
+$main-color:#24749D;
 
+.scrum-tabs {
+    padding: 0 2rem 0 2rem;
+}
+
+.show-tabbar {
+    padding: 2rem 0 2rem 0;
+    background-color: $main-color !important;
 }
