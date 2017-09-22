@@ -20,24 +20,28 @@ export class HomePage {
 
 }
 
+
 openMenu() {
    let actionSheet = this.actionsheetCtrl.create({
-     title: 'Actie voor taak',
+     title: '',
      cssClass: 'action-sheets-basic-page',
      buttons: [
        {
          text: 'Doing',
          role: 'destructive',
-         icon: !this.platform.is('ios') ? 'trash' : null,
+         icon: !this.platform.is('ios') ? 'share' : null,
          handler: () => {
-           console.log('Delete clicked');
+           console.log('Taak naar doing');
          }
        },
        {
          text: 'Verwijder',
-         icon: !this.platform.is('ios') ? 'share' : null,
+         icon: !this.platform.is('ios') ? 'trash' : null,
          handler: () => {
-           console.log('Share clicked');
+           console.log('Verwijderen');
+           console.log(this.places);
+           this.places.splice(0,1);
+           console.log(this.places);
          }
        },
        {
@@ -45,7 +49,7 @@ openMenu() {
          role: 'cancel', // will always sort to be on the bottom
          icon: !this.platform.is('ios') ? 'close' : null,
          handler: () => {
-           console.log('Cancel clicked');
+           console.log('Actie annuleren');
          }
        }
      ]
